@@ -47,6 +47,9 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MTe-em-adI" secondAttribute="trailing" id="zLv-gQ-nzm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Fl2-KX-eN0" kind="show" identifier="EditItem" trigger="accessoryAction" id="AkL-8s-OgH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -116,7 +119,7 @@
                                 <action selector="cancel" destination="Fl2-KX-eN0" id="3rd-uB-unx"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="iIH-zR-Zfe">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="iIH-zR-Zfe">
                             <connections>
                                 <action selector="done" destination="Fl2-KX-eN0" id="IGr-0j-NOv"/>
                             </connections>
@@ -151,4 +154,7 @@
             <point key="canvasLocation" x="-174" y="91"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AkL-8s-OgH"/>
+    </inferredMetricsTieBreakers>
 </document>

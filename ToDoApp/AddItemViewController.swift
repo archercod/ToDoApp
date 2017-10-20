@@ -18,6 +18,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var texrField: UITextField!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
+    var itemToEdit: ChecklistItem!
     
     weak var delegate: AddItemViewControllerDelegate?
     
@@ -25,6 +26,12 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         texrField.delegate = self
+        
+        if let item = itemToEdit {
+            title = "Edit Item"
+            texrField.text = item.text
+            doneBarButton.isEnabled = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
