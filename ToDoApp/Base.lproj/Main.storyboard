@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="qzp-yW-lIb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7gP-9P-1jv">
                             <connections>
-                                <segue destination="Fl2-KX-eN0" kind="show" id="ewe-kg-s34"/>
+                                <segue destination="Fl2-KX-eN0" kind="show" identifier="AddItem" id="ewe-kg-s34"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,11 +75,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnR-2z-amo">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnR-2z-amo">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="43.5"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="Fl2-KX-eN0" eventType="editingDidEndOnExit" id="j74-Lp-Z46"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -111,6 +114,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelBarButton" destination="m1D-H9-Q14" id="6Qk-Kd-CQX"/>
+                        <outlet property="doneBarButton" destination="iIH-zR-Zfe" id="0iL-Rc-BQI"/>
                         <outlet property="texrField" destination="jnR-2z-amo" id="odo-kG-eKE"/>
                     </connections>
                 </tableViewController>
