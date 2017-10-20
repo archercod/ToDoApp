@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6082F81F99E000007E57E1 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6082F71F99E000007E57E1 /* ChecklistItem.swift */; };
 		EA81D3E61F98AE1000F1FEE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81D3E51F98AE1000F1FEE0 /* AppDelegate.swift */; };
 		EA81D3EB1F98AE1000F1FEE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA81D3E91F98AE1000F1FEE0 /* Main.storyboard */; };
 		EA81D3ED1F98AE1000F1FEE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA81D3EC1F98AE1000F1FEE0 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA6082F71F99E000007E57E1 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		EA81D3E21F98AE1000F1FEE0 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA81D3E51F98AE1000F1FEE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA81D3EA1F98AE1000F1FEE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				EA81D3E51F98AE1000F1FEE0 /* AppDelegate.swift */,
 				EA81D3F71F98AF8900F1FEE0 /* ChecklistViewController.swift */,
+				EA6082F71F99E000007E57E1 /* ChecklistItem.swift */,
 				EA81D3E91F98AE1000F1FEE0 /* Main.storyboard */,
 				EA81D3EC1F98AE1000F1FEE0 /* Assets.xcassets */,
 				EA81D3EE1F98AE1000F1FEE0 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA81D3E61F98AE1000F1FEE0 /* AppDelegate.swift in Sources */,
+				EA6082F81F99E000007E57E1 /* ChecklistItem.swift in Sources */,
 				EA81D3F81F98AF8900F1FEE0 /* ChecklistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
