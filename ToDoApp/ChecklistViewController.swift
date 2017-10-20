@@ -55,6 +55,14 @@ class ChecklistViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        tableView.reloadData()
+        
+        //let indexPaths = [indexPath]
+        //tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
