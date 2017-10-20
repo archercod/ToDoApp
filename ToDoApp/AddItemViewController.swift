@@ -11,6 +11,7 @@ import UIKit
 protocol AddItemViewControllerDelegate: class {
     func addItemViewControllerDidCancel(_ controller: AddItemViewController)
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
+    func addItemViewController(_ controller: AddItemViewController, didFinishedEditing item: ChecklistItem)
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
@@ -44,11 +45,17 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func done() {
-        let item = ChecklistItem()
-        item.text = texrField.text!
-        item.checked = false
+        if let itemToEdit = itemToEdit {
+            itemToEdit.text = texrField.text!
+            delegate?.addItemViewController(self, didFinishedEditing: itemToEdit)
+        } else {
+            let item = ChecklistItem()
+            item.text = texrField.text!
+            item.checked = false
+            
+            delegate?.addItemViewController(self, didFinishAdding: item)
+        }
         
-        delegate?.addItemViewController(self, didFinishAdding: item)
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
