@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="qzp-yW-lIb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7gP-9P-1jv">
                             <connections>
-                                <action selector="addItem:" destination="vLB-T5-ZRU" id="fyd-Rj-WVF"/>
+                                <segue destination="Fl2-KX-eN0" kind="show" id="ewe-kg-s34"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,6 +56,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5G-x1-5O2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564.375" y="90.845070422535215"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="iMr-f1-ra8">
+            <objects>
+                <tableViewController id="Fl2-KX-eN0" customClass="AddItemViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="oVm-Ec-bgt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Fg7-pf-col">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aXL-ka-Ky7">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aXL-ka-Ky7" id="tVa-O9-9Ff">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnR-2z-amo">
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jnR-2z-amo" secondAttribute="trailing" constant="8" id="Bzd-13-vSg"/>
+                                                <constraint firstItem="jnR-2z-amo" firstAttribute="leading" secondItem="tVa-O9-9Ff" secondAttribute="leading" constant="8" id="HCB-tX-k71"/>
+                                                <constraint firstItem="jnR-2z-amo" firstAttribute="top" secondItem="tVa-O9-9Ff" secondAttribute="top" id="I9G-vK-Nul"/>
+                                                <constraint firstAttribute="bottom" secondItem="jnR-2z-amo" secondAttribute="bottom" id="ULb-6q-kuh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Fl2-KX-eN0" id="uUr-oq-58p"/>
+                            <outlet property="delegate" destination="Fl2-KX-eN0" id="0dt-ZG-ev6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add" id="ebN-Wa-it2">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="m1D-H9-Q14">
+                            <connections>
+                                <action selector="cancel" destination="Fl2-KX-eN0" id="3rd-uB-unx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="iIH-zR-Zfe">
+                            <connections>
+                                <action selector="done" destination="Fl2-KX-eN0" id="IGr-0j-NOv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="texrField" destination="jnR-2z-amo" id="odo-kG-eKE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pid-KE-aeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1305" y="89.788732394366193"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KqZ-nl-6fz">
